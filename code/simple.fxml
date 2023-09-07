@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#pressedHandle" onKeyReleased="#releaseHandle" prefHeight="810.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.simpleController">
+   <children>
+      <AnchorPane fx:id="_field" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#pressedHandle" onKeyReleased="#releaseHandle" prefHeight="800.0" prefWidth="750.0">
+         <children>
+            <ImageView fitHeight="837.0" fitWidth="832.0" layoutX="-27.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@未命名.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="value" layoutX="161.0" layoutY="456.0" opacity="0.17" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="200.0" />
+               </font>
+            </Text>
+            <Text fx:id="BS" fill="#00066f" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BestScore:00:00">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="27.0" />
+               </font>
+            </Text>
+            <Text fx:id="rec" fill="RED" layoutX="118.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Break the Record!!!" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="42.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="zombie" fitHeight="80.0" fitWidth="70.0" layoutX="37.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@zombie.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="man" fitHeight="107.0" fitWidth="83.0" layoutX="364.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@人.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AT" layoutX="120.0" layoutY="777.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Volume : 100">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="YW" layoutX="180.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win!" visible="false" wrappingWidth="475.1298828125">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="83.0" />
+               </font>
+            </Text>
+            <Text fx:id="Spent" layoutX="156.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You  spent :" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="41.0" />
+               </font>
+            </Text>
+            <Text fx:id="_time" layoutX="465.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="at" fill="RED" layoutX="562.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-10" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="51.0" />
+               </font>
+            </Text>
+            <Button fx:id="Back" layoutX="14.0" layoutY="748.0" mnemonicParsing="false" onAction="#onBackPressed" opacity="0.83" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: black;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PauseField" prefHeight="800.0" prefWidth="750.0" visible="false">
+         <children>
+            <Text fx:id="GO" fill="RED" layoutX="220.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game &#10;&#9;Over" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="82.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="ground" fitHeight="944.0" fitWidth="1302.0" layoutX="-241.0" layoutY="-24.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="wasd" fitHeight="209.0" fitWidth="248.0" layoutX="96.0" layoutY="294.0" opacity="0.87" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@wasd.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="one" layoutX="158.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Pause" visible="false" wrappingWidth="475.1298828125">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="69.0" />
+               </font>
+            </Text>
+            <Text fx:id="two" layoutX="381.0" layoutY="352.0" lineSpacing="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="W: You goes Up&#10;A: You goes Left&#10;S: You goes Down&#10;D: You goes Right" visible="false" wrappingWidth="325.32177734375">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="three" layoutX="220.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press &quot;P&quot; Keep Going Game" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="GoBack" alignment="TOP_LEFT" layoutX="269.0" layoutY="510.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#GoBackPressed" opacity="0.89" style="-fx-background-color: black;" text="Go Back Menu" textFill="WHITE" textOverrun="CLIP" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="Back1" layoutX="22.0" layoutY="758.0" mnemonicParsing="false" onAction="#onBackPressed" opacity="0.83" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: black;" text="Back" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
